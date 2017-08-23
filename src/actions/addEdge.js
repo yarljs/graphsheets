@@ -12,6 +12,6 @@ function graphsheetsAddEdge(vertex, from) {
 
 export default compose(
   Reducable((state, action) => {
-    return state
+    return dotProp.merge(state, `yarljs.graphsheets.verts.${action.vertex}.edges`, from);
   })
 )(graphsheetsAddEdge)

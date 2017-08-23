@@ -3,7 +3,14 @@ export default {
     graphsheets: {
       verts: {
 
-      }
+      },
+      vertCache: {
+        count: 0,
+        lookup: {
+
+        }
+      },
+      error: null
     }
   }
 }

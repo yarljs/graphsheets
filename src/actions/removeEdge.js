@@ -6,12 +6,14 @@ function graphsheetsRemoveEdge(vertex, from) {
   return {
     type: this.type,
     vertex,
-     from
+    from
   };
 }
 
 export default compose(
   Reducable((state, action) => {
-    return state
+    const s = dotProp.get(state, `yarljs.graphsheets.verts.${action.vertex}.edges`);
+    return dotProp.set(state, `yarljs.graphsheets.verts.${action.vertex}.edges`,
+      s.splice(s.indexOf(action.from)));
   })
 )(graphsheetsRemoveEdge)
