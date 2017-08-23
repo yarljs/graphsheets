@@ -1,4 +1,4 @@
-import GraphCell from './GraphCell';
+import GraphCell from './graphCell';
 export {
   GraphCell
 }

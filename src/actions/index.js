@@ -4,7 +4,7 @@ import removeEdge from './removeEdge';
 import removeVertex from './removeVertex';
 import setVertexMarkdown from './setVertexMarkdown';
 import setVertexTransducer from './setVertexTransducer';
-
+import setVertexResult from './setVertexResult';
 export {
   addEdge,
   addVertex,
@@ -12,4 +12,5 @@ export {
   removeVertex,
   setVertexMarkdown,
   setVertexTransducer,
+  setVertexResult
 }

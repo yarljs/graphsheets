@@ -21,7 +21,7 @@ export default compose(
     let cache = dotProp.get(state, `yarljs.graphsheets.vertCache`);
     let index = cache.count;
     cache.lookup[action.label] = index;
-    cache.reverse[index] = action.label;
+    cache.inverse[index] = action.label;
     cache.count += 1;
 
     let res = dotProp.set(state, `yarljs.graphsheets.vertCache`, cache);
