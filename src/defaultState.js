@@ -8,9 +8,15 @@ export default {
         count: 0,
         lookup: {
 
+        },
+        inverse: {
+
         }
       },
-      error: null
+      error: null,
+      results: {
+
+      }
     }
   }
 }

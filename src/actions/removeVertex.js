@@ -31,7 +31,12 @@ export default compose(
       }
     });
     //let res = dotProp.delete(state, });
-    let res = dotProp.delete(state, `yarljs.graphsheets.vertCache.lookup.${action.label}`);
+    let res = dotProp.delete(state,
+      `yarljs.graphsheets.vertCache.lookup.${action.label}`);
+
+    res = dotProp.delete(state,
+      `yarljs.graphsheets.vertCache.inverse.${index}`);
+
     return dotProp.set(res, `yarljs.graphsheets.verts`, verts);
   })
 )(graphsheetsRemoveVertex)
