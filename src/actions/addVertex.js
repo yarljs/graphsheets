@@ -19,7 +19,7 @@ function graphsheetsAddVertex(label) {
 export default compose(
   Reducable((state, action) => {
     let cache = dotProp.get(state, `yarljs.graphsheets.vertCache`);
-    cache[action.label] = cache.count;
+    cache.lookup[action.label] = cache.count;
     cache.count += 1;
 
     let res = dotProp.set(state, `yarljs.graphsheets.vertCache`, cache);

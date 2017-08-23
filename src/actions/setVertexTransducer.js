@@ -12,9 +12,8 @@ function graphsheetsSetVertexTransducer(vertex, transducer) {
 
 export default compose(
   Reducable((state, action) => {
-    return dotProp.set(
-      state,
-      `yarljs.graphsheets.verts.${action.vertex}.transducer`,
-      action.transducer);
+    let res = dotProp.get(state, `yarljs.graphsheets.verts.${action.vertex}`);
+    res.transducer = action.transducer;
+    return dotProp.set(state, `yarljs.graphsheets.verts.${action.vertex}`, res);
   })
 )(graphsheetsSetVertexTransducer)

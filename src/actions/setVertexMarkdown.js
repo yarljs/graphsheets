@@ -12,6 +12,7 @@ function graphsheetsSetVertexMarkdown(vertex, markdown) {
 
 export default compose(
   Reducable((state, action) => {
-    return dotProp.set(state, `yarljs.graphsheets.verts.${action.vertex}.markdown`, action.markdown);
+    return dotProp.set(state,
+      `yarljs.graphsheets.verts.${action.vertex}.markdown`, action.markdown);
   })
 )(graphsheetsSetVertexMarkdown)
